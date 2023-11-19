@@ -5,9 +5,15 @@
     "baseUrl": "./",
     "outDir": "./dist/out-tsc",
     "forceConsistentCasingInFileNames": true,
+    
+    //add strict property initialization so no need to write !
+    "strictPropertyInitialization": false,
     "strict": true,
+    //noimplicit any to prevent come out error: any to data
+    "noImplicitAny": false,
     "noImplicitOverride": true,
-    "noPropertyAccessFromIndexSignature": true,
+    //form problem when using billingaddress?error need to use ['billingaddress']
+    "noPropertyAccessFromIndexSignature": false,
     "noImplicitReturns": true,
     "noFallthroughCasesInSwitch": true,
     "sourceMap": true,
@@ -19,6 +25,10 @@
     "target": "ES2022",
     "module": "ES2022",
     "useDefineForClassFields": false,
+    //to use the json in typescript
+    "resolveJsonModule": true,
+    //to use the json in typescript
+    "esModuleInterop": true,
     "lib": [
       "ES2022",
       "dom"
